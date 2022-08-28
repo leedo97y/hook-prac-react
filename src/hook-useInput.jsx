@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 
 const useInput = (initialValue, validator) => {
-  const [value, setValue] = useInput(initialValue);
+  const [value, setValue] = useState(initialValue);
   const onChange = (event) => {
     const value = event.target.value;
 
