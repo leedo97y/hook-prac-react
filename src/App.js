@@ -1,21 +1,17 @@
-import logo from "./logo.svg";
+import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [count, setCount] = useState(0);
+
+  const onClick = () => {
+    setCount(count + 1);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hi</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Count : {count}</h1>
+      <button onClick={onClick}>Click here for increasing Count!</button>
     </div>
   );
 }
