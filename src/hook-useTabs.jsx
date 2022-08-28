@@ -28,10 +28,11 @@ const useTabs = (initialTab, allTabs) => {
 
   return {
     currentItem: allTabs[currentIndex],
+    // defaultTab (= currentItem) is '0'
     changeItem: setCurrentIndex,
+    // update page index by using setCurrentIndex code
   };
 };
-// defaultTab (= currentItem) is '0'
 
 function App() {
   const { currentItem, changeItem } = useTabs(0, content);
@@ -45,6 +46,7 @@ function App() {
       <div>{currentItem.content}</div>
     </div>
     // you should bring currentItem's content below the Tab change button.
+    // add index to map(), add onClick function 'changeItem' on button.
 
     // each Section have a Button
     // as same as pagination, you can switch to the page that you'd like to see.
